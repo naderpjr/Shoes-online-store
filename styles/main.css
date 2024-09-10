@@ -1,0 +1,286 @@
+@import url("./_fonts.css");
+@import url("./_utlils.css");
+@import url("./mobile.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "yekan";
+}
+html {
+    overflow-x: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero-section {
+    width: 100vw;
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/images/hero-section.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem 2rem 10rem 2rem;
+}
+
+#header {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.header__login-button {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    font-size: 0.8rem;
+    background-color: #f3f3f3;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.header__login-button:hover {
+    background-color: #f8f8f8;
+    border: 1px solid #000;
+}
+
+.header__login-button img {
+    width: 1rem;
+    height: 1rem;
+}
+
+#cart {
+    position: relative;
+}
+
+#cart img {
+    width: 2rem;
+    height: 2rem;
+}
+
+#cart-badge {
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: #000;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    right: -1rem;
+    top: -0.5rem;
+}
+
+#logout-button {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    font-size: 0.8rem;
+    background-color: #ff5b5b;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#logout-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#logout-button:hover {
+    background-color: #ff2222;
+    color: #fff;
+}
+
+.hero-section-content {
+    color: #fff;
+}
+
+.see-product-arrow {
+    width: 2rem;
+    height: 2rem;
+    animation: sliding 1s ease-in-out infinite alternate;
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+}
+
+.product-grid-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    border: 2px solid #d4d4d4;
+    transition: all 0.25s ease-in-out;
+}
+.product-grid-item img {
+    border-radius: 0.5rem;
+}
+.product-grid-item:hover {
+    border: 2px solid #000;
+}
+
+.product-to-cart-section button{
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.75rem;
+    background-color: #000;
+    color: #fff;
+    transition: all 0.25s ease-in-out;
+}
+
+.product-to-cart-section button:hover {
+    background-color: #f7f7f7;
+    color: #000;
+}
+
+.footer {
+    background: linear-gradient(
+        45deg,
+        rgba(91, 91, 91, 0.767),
+        rgba(0 , 0, 0, 0.785)
+    );
+    width: 100vw;
+    color: #fff;
+    text-align: center;
+}
+
+.up-arrow-button {
+    display: flex;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.up-arrow-button img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Login */
+
+.login-form-container {
+    background: linear-gradient(
+        45deg,
+        rgb(138, 138, 138),
+        rgb(192, 192, 192)
+    );
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form {
+    width: 30%;
+}
+
+#login-form label {
+    color: #fff;
+    margin: 0.5rem 0;
+}
+
+#login-form input {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    outline: none;
+}
+
+#login-form input:focus {
+    border: 2px solid #000;
+}
+
+#hide-password {
+    width: 2rem;
+    cursor: pointer;
+}
+
+#login-form-button {
+    background-color: #000;
+    color: #fff;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+/* cart  */
+
+.cart-container {
+    background: linear-gradient(
+        45deg,
+        rgb(138, 138, 138),
+        rgb(192, 192, 192)
+    );
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#cart-items-container {
+    height: 15rem;
+    overflow-y: scroll;
+    border: 2px solid #000;
+    width: 70%;
+    background-color: #ddd;
+    border-radius: 0.5rem;
+}
+
+.cart-item img {
+     width: 7rem;
+     height: 7rem;
+     border: 2px solid #5f5f5f;
+     border-radius: 0.5rem;
+}
+
+.cart-item button {
+    background-color: #fff;
+    border: 2px solid #ff2222;
+    color: red;
+    font-size: 1rem ;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.cart-item button:hover {
+    background-color: red;
+    color: #fff;
+}
